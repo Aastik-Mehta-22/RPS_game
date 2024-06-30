@@ -89,3 +89,8 @@ choices.forEach((choice) => {
 
 
 
+window.addEventListener("load", () => { 
+    const storedHighestScore = parseInt(localStorage.getItem("highestScore")) || 0; 
+        highestScore = storedHighestScore; // Update the highest score variable //     
+        highestScorePara.innerText = highestScore; // Update the displayed highest score 
+});
