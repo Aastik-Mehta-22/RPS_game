@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-h1{
+h1 {
     background-color: rgb(81, 32, 241);
     color: rgb(255, 251, 251);
     height: 6rem;
@@ -12,93 +12,208 @@ h1{
     font-size: 3rem;
     font-family: Arial, Helvetica, sans-serif;
 }
-.choice{
+
+.choice {
     height: 165px;
     width: 165px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.choice:hover{
+
+.choice:hover {
     cursor: pointer;
     background-color: #081b30;
 }
-img{
+
+img {
     height: 150px;
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
 }
-.choices{
+
+.choices {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
+    flex-wrap: wrap;
 }
-.score-board{
+
+.score-board {
     display: flex;
     justify-content: center;
-    align-items: center;/*for vertical align centre */
+    align-items: center;
     font-size: 2rem;
     margin-top: 4rem;
     gap: 5rem;
 }
-#user-score,#comp-score{
+
+#user-score, #comp-score {
     font-size: 4rem;
 }
-.msg-container{
-    margin-top: 5rem;
 
+.msg-container {
+    margin-top: 5rem;
 }
-#msg{
-   background-color:#081b30; /*  #081b30 */
+
+#msg {
+    background-color: #081b30;
     display: inline;
     color: white;
     padding: 0.5rem;
     font-size: 2rem;
     border-radius: 1rem;
 }
-#msg:hover{
+
+#msg:hover {
     color: rgb(16, 4, 248);
     cursor: pointer;
 }
+
 footer {
-    background-color: rgb(81, 32, 241); /* Set the background color of the footer */
-    color: #fff; /* Set the text color of the footer */
-    padding: 20px; /* Add padding to the footer for better spacing */
-    text-align: center; /* Center-align the text in the footer */
-    position: fixed; /* Fixed position to keep it at the bottom of the page */
-    bottom: 0;
-    font-size: 1.5rem; /* Stick the footer to the bottom of the page */
-    width: 100%; /* Make the footer span the entire width of the page */
-}
-/*  */
-#section{
-    position: relative; /* Set the position to relative to position the ::before pseudo-element */
+    background-color: rgb(81, 32, 241);
+    color: #fff;
     padding: 20px;
-    /* color: #fff; Set text color to white or a contrasting color */
-  }
-  
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+#section {
+    position: relative;
+    padding: 20px;
+}
+
 #section::before {
-    content: ""; /* Required for the ::before pseudo-element */
-    position: absolute; /* Position the pseudo-element absolute within the relative .content */
+    content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('hands-playing-rock-paper-scissors-260nw-2187551809.png'); /* Replace 'path/to/your-image.jpg' with the actual path to your image */
+    background-image: url('hands-playing-rock-paper-scissors-260nw-2187551809.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* Adjust the opacity to your preference (0.0 to 1.0) */
-    z-index: -1; /* Send the pseudo-element to the back */
-  }
-  #highestScore{
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#highestScore {
     padding: 2px;
     margin: 2px;
     font-weight: bold;
     font-size: 1.5em;
-  }
+}
+
+.highest-score-container {
+    height: 80px;
+    width: 120px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        height: 4rem;
+        line-height: 4rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .choices {
+        gap: 1rem;
+    }
+
+    .score-board {
+        font-size: 1.5rem;
+        gap: 2rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2.5rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+        padding: 0.3rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+
+    .highest-score-container {
+        height: 60px;
+        width: 90px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+
+    .choice {
+        height: 80px;
+        width: 80px;
+    }
+
+    img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .choices {
+        gap: 0.5rem;
+    }
+
+    .score-board {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    #user-score, #comp-score {
+        font-size: 1.5rem;
+    }
+
+    #msg {
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+
+    .highest-score-container {
+        height: 50px;
+        width: 70px;
+        font-size: 0.8rem;
+    }
+}

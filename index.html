@@ -7,54 +7,42 @@
     <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Merriweather:ital,wght@1,300&family=Oswald&family=Sevillana&display=swap');
-      </style>
+    </style>
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-<section id="section">
-
-    
-    <div class="choices">
-        <div class="choice" id="rock">
-            <img src="rock.png" alt="rock">
-
+    <section id="section">
+        <div class="choices">
+            <div class="choice" id="rock">
+                <img src="rock.png" alt="rock">
+            </div>
+            <div class="choice" id="paper">
+                <img src="paper.png" alt="Paper">
+            </div>
+            <div class="choice" id="scissors">
+                <img src="scissors.png" alt="Scissors">
+            </div>
+            <div class="highest-score-container">
+                <p id="highestScore"> Highest Score : <span id="highestScorenumber"></span></p>
+            </div>
         </div>
-        <div class="choice" id="paper">
-            <img src="paper.png" alt="Paper">
+        <div class="score-board">
+            <div class="score">
+                <p id="user-score">0</p>
+                <p>You</p>
+            </div>
+            <div class="score">
+                <p id="comp-score">0</p>
+                <p>Comp</p>
+            </div>
         </div>
-        <div class="choice" id="scissors">
-            <img src="scissors.png" alt="Scissors">
+        <div class="msg-container">
+            <p id="msg">Play Your Move </p>
         </div>
-
-
-        <div style="height: 80px; width: 120px; background-color: black; color: rgb(255, 255, 255); display: flex; align-items: center; border: 2px;border-radius: 10px; ">
-            <p id="highestScore"> Highest Score : <span id="highestScorenumber"></span></p>
-        </div>
-    </div>
-    <div class="score-board">
-        <div class="score">
-            <p  id="user-score" >0</p>
-            <p>You</p>
-
-        </div>
-        <div class="score" >
-            <p id="comp-score" >0</p>
-            <p>Comp</p>
-
-        </div>
-    </div>
-    <div class="msg-container">
-        <p id="msg">Play Your Move </p>
-    </div>
-</section>
-
-
-<!-- Footer -->
-<footer>
-    <p>&copy; 2023 RPS-Game. All rights reserved.</p>
-</footer>
-  
-    
+    </section>
+    <footer>
+        <p>&copy; 2023 RPS-Game. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
